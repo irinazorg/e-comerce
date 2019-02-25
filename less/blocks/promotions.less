@@ -1,0 +1,164 @@
+.promotions {
+  display: flex;
+  width: 1400px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.promotions__right-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1046px;
+  justify-content: space-between;
+}
+
+.promotions__item {
+  position: relative;
+  margin-bottom: 30px;
+  border: 2px solid #e0e0e0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f6f4f4;
+
+  &--main-promo {
+    width: 1046px;
+    height: 269px;
+  }
+
+  &--second-promo {
+    width: 446px;
+    height: 346px;
+  }
+
+  &--banner {
+    width: 567px;
+    height: 346px
+  }
+
+  &--third-promo {
+    width: 329px;
+    height: 646px;
+  }
+}
+
+.promotions__link {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: #252525;
+}
+
+.promotions__title-wrap {
+  position: absolute;
+  top: -50px;
+  left: 30px;
+}
+
+.promotions__title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.promotions__country {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #757575;
+}
+
+.promotions__advantages-list {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -180px;
+  left: 50px;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.promotions__button-wrapper {
+  position: absolute;
+  bottom: 25px;
+  left: 340px;
+
+  &--third-promo {
+    left: 220px;
+  }
+}
+
+.promotions__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    fill: #009688;
+  }
+
+  &:focus {
+    fill: #009688;
+  }
+
+   &:active {
+    opacity: 0.5;
+  }
+}
+
+.promotions__banner-title {
+  position: absolute;
+  top: 87px;
+  left: 35px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 200;
+  width: 220px;
+}
+
+.promotions__banner-button {
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: 35px;
+}
+
+
+@media screen and (max-width: 1420px) {
+  .promotions {
+    width: 1160px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .promotions__item {
+    &--third-promo {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .promotions {
+    width: 952px;
+  }
+
+  .promotions__item {
+    &--main-promo {
+      width: 952px;
+      height: 245px;
+    }
+
+    &--second-promo {
+      display: none;
+    }
+
+    &--banner {
+      display: none;
+    }
+  }
+}

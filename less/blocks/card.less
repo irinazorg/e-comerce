@@ -1,0 +1,190 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  height: 420px;
+  margin-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    opacity: 0.25;
+    top: 0;
+    left: -13px;
+    width: 4px;
+    height: 420px;
+    background-image: url(../img/main-page/shadow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(5n)::before, &:first-child::before {
+    background-image: none;
+  }
+
+  &:hover::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    width: 355px;
+    height: 460px;
+    background-color: #fff;
+    border-radius: 65px;
+    z-index: -100;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card__title-description {
+  order: -1;
+  padding-left: 36px;
+  padding-top: 26px;
+}
+
+.card__title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #252525;
+}
+
+.card__country {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #757575;
+}
+
+.card__price {
+  padding: 0;
+  padding-left: 36px;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 35px;
+  line-height: 35px;
+  color: #009688;
+}
+
+.card__button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  right: 37px;
+  width: 80px;
+}
+
+.card__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    fill: #009688;
+  }
+
+  &:focus {
+    fill: #009688;
+  }
+}
+
+.card__favourite path {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  fill: transparent;
+  stroke: #252525;
+}
+
+.card__favourite:hover path {
+  stroke: #009688;
+}
+
+.card__favourite:focus path {
+  stroke: #009688;
+}
+
+.card__favourite:active path {
+  fill: #009688;
+}
+
+
+@media screen and (max-width: 1421px) {
+  .card {
+    &::before {
+      left: -40px;
+    }
+
+    &:nth-child(5n)::before {
+      content: "";
+      position: absolute;
+      opacity: 0.25;
+      top: 0;
+      left: -40px;
+      width: 4px;
+      height: 420px;
+      background-image: url(../img/main-page/shadow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:nth-child(4n)::before {
+      background-image: none;
+    }
+
+    &:hover::after {
+      width: 413px;
+      left: -37px;
+    }
+  } 
+}
+
+
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 280px;  
+    height: 370px;
+
+    &::before {
+      left: -30px;
+    }
+
+    &:nth-child(5n)::before {
+      content: "";
+      position: absolute;
+      opacity: 0.25;
+      top: 0;
+      left: -30px;
+      width: 4px;
+      height: 420px;
+      background-image: url(../img/main-page/shadow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover::after {
+      width: 336px;
+      height: 420px;
+      left: -27px;
+    }
+  }
+
+  .card__price {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}

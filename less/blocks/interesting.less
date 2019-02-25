@@ -1,0 +1,168 @@
+.interesting {
+  overflow-x: hidden;
+  margin-bottom: 55px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.interesting__title-wrapper {
+  position: relative;
+}
+
+.interesting__toggles {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.interesting__wrapper {
+  width: 200%;
+}
+
+.interesting__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+}
+
+.interesting__item {
+  width: 300px;
+  transform: translateX(-150px);
+  margin-right: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: 0.25;
+    top: 0;
+    left: -25px;
+    width: 4px;
+    height: 410px;
+    background-image: url(../img/main-page/shadow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.interesting__link {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.interesting__title-description {
+  order: -1;
+  padding-left: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.interesting__title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #252525;
+}
+
+.interesting__country {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #757575;
+}
+
+.interesting__price {
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 35px;
+  line-height: 35px;
+  color: #009688;
+}
+
+.interesting__button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  width: 80px;
+}
+
+.interesting__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    fill: #009688;
+  }
+
+  &:focus {
+    fill: #009688;
+  }
+
+   &:active {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .interesting__title-description {
+    padding-left: 16px;
+  }
+
+  .interesting__title {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 700;
+  }
+
+  .interesting__country {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .interesting__price {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .interesting__button-wrapper {
+    width: 60px;
+    bottom: 0;
+    right: 0;
+  }
+
+  .interesting__item {
+    width: 150px;
+    transform: translateX(-75px);
+    margin-right: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0.25;
+      top: 0;
+      left: -25px;
+      width: 4px;
+      height: 210px;
+      background-image: url(../img/main-page/shadow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

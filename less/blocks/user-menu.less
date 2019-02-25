@@ -1,0 +1,101 @@
+.user-menu {
+  display: flex;
+}
+
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  margin-right: 45px;
+}
+
+.user-menu__greating {
+  padding: 0;
+  margin: 0;
+  margin-right: 8px;
+}
+
+.user-menu__name-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+.user-menu__name-wrap:hover .user-menu__name,
+.user-menu__name-wrap:focus .user-menu__name {
+  color: #009688;
+}
+
+
+.user-menu__name-wrap:hover .user-menu__icon,
+.user-menu__name-wrap:focus .user-menu__icon {
+  fill: #009688;
+}
+
+.user-menu__name {
+  padding: 0;
+  margin: 0;
+  padding-left: 3px;
+  color: #795548;
+}
+
+.user-menu__favoutite {
+  padding-top: 3px;
+  padding-left: 28px;
+  cursor: pointer;
+
+  &:hover {
+    fill: #009688;
+  }
+
+  &:focus {
+    fill: #009688;
+  }
+}
+
+.user-menu__cart {
+  position: relative;
+  padding-top: 3px;
+  padding-left: 28px;
+  cursor: pointer;
+
+  &--full::before {
+    content: "3";
+    position: absolute;
+    top: -3px;
+    left: 24px;
+    width: 16px;
+    height: 16px;
+    background-color: #009688;
+    color: #fff;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    fill: #009688;
+  }
+
+  &:focus {
+    fill: #009688;
+  }
+}
+
+
+@media screen and (max-width: 1421px) {
+  .user-menu {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .user-menu {
+    justify-content: space-between;
+  }
+
+  .user-menu__favoutite {
+    margin-left: auto;
+  }
+}
